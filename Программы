@@ -1,0 +1,54 @@
+Первая:
+chetch = int(input())
+if chetch % 2 == 0:
+    print('число чётное')
+else:
+    print('число нечётное')
+
+Вторая:
+celcium = float(input())
+print('Это', (celcium * 9/5) + 32,'Фаренгейт')
+
+Третья:
+c = int(input())
+if c % 5 == 0 and c % 7 == 0:
+    print('11')
+elif c % 5 == 0:
+    print('01')
+elif c % 7 == 0:
+    print('10')
+else:
+    print('00')
+Четвёртая:
+
+import math
+
+print("Квадратное уравнение равно a*x**2+b*x+c. Введите через enter a, b  и c")
+a = int(input())
+b = int(input())
+c = int(input())
+if b**2 - 4*a*c >=0:
+    print('x1 =', (-b+(math.sqrt(b**2 - 4*a*c)))/(2*a), 'x2 =', (-b-(math.sqrt(b**2 - 4*a*c)))/(2*a))
+else:
+    print('Дискриминант < 0. У Уравнения нет решений.')
+    
+Пятая:
+import random
+n = int(input('Введите n: '))
+k = int(input('Введите k: '))
+isk = random.randint(1, n)
+ud = 0
+while k > 0:
+    pop = int(input('Ваша догадка: '))
+    if pop == isk:
+        ud = 1
+        print('Вы угадали!')
+        break
+    elif pop > isk:
+        k -= 1
+        print('Загаданное число меньше.')
+    elif pop < isk:
+        k -= 1
+        print('Загаданное число больше.')
+if ud == 0:
+    print('Вы не угадали!')
